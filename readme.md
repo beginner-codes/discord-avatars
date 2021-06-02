@@ -2,7 +2,7 @@
 
 This repository contains the server avatars that were generated for the Beginner.py Discord server.
 
-## By Month
+## Avatars
 
 | Date | Code | Image |
 |---|---|---|
