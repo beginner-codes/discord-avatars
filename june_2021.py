@@ -125,9 +125,9 @@ def create_image(size, width):
                     lum = 1.5
                 else:
                     lum = lum / 2 + 0.5
-                r = min(255, int(r * (lum)))
-                g = min(255, int(g * (lum)))
-                b = min(255, int(b * (lum)))
+                r = min(255, int(r * lum))
+                g = min(255, int(g * lum))
+                b = min(255, int(b * lum))
 
                 for i in range(0, size):
                     for j in range(0, size):
