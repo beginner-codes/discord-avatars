@@ -14,43 +14,6 @@ def yield_channels(pixels: list[list[tuple[int, int, int, int]]]):
 
 
 def generate_image(*frame_pixels):
-    # frames = []
-    # size = len(frame_pixels[0])
-    # repl_size = int(size * 0.8)
-    # repl_gutter = int(size * 0.1)
-    # repl_image = Image.open("repl.png").resize((repl_size,) * 2)
-    # repl = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    # repl.paste(
-    #     repl_image,
-    #     (repl_gutter, repl_gutter, repl_gutter + repl_size, repl_gutter + repl_size),
-    #     repl_image,
-    # )
-    # frames = []
-    # size = len(frame_pixels[0])
-    # repl_size = int(size * 0.8)
-    # repl_gutter = int(size * 0.1)
-    # repl_image = Image.open("repl_thick.png").resize((repl_size,) * 2)
-    # repl = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    # repl.paste(
-    #     repl_image,
-    #     (repl_gutter, repl_gutter, repl_gutter + repl_size, repl_gutter + repl_size),
-    #     repl_image,
-    # )
-    # for pixels in frame_pixels:
-    #     frame = Image.new("RGB", (size, size))
-    #     layer = Image.frombytes("RGB", (size, size), to_bytes(pixels))
-    #     layer = layer.resize(repl_image.size)
-    #     frame.paste(
-    #         layer,
-    #         (
-    #             repl_gutter,
-    #             repl_gutter,
-    #             repl_gutter + repl_size,
-    #             repl_gutter + repl_size,
-    #         ),
-    #         repl_image,
-    #     )
-    #     frames.append(frame)
     frames = []
     size = len(frame_pixels[0])
     repl_size = int(size * 0.7)
