@@ -95,7 +95,7 @@ def create_image(size, width):
                     for j in range(0, size):
                         y = int(row * size + i) % width
                         x = int(column * size + j) % width
-                        pixels[x][y] = (r, g, b)
+                        pixels[x][-y] = (r, g, b)
 
         frames.append(pixels)
 
