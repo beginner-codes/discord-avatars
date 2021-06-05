@@ -64,7 +64,6 @@ def create_image(size, width):
             if not offsets
             or all(abs(i - o) > 3 - n for n, o in enumerate(offsets[-3:]))
         ]
-        print(options, offsets)
         chose = choice(options)
         offsets.append(chose)
     for frame in range(num_frames):
