@@ -16,8 +16,8 @@ def yield_channels(pixels: list[list[tuple[int, int, int, int]]]):
 def generate_image(*frame_pixels):
     frames = []
     size = len(frame_pixels[0])
-    repl_size = int(320)
-    repl_gutter = int(110)
+    repl_size = 280
+    repl_gutter = (540 - repl_size) // 2
     repl_image = Image.open("repl_bold.png").resize((repl_size,) * 2)
     repl = Image.new("RGBA", (size, size), (0, 0, 0, 0))
     repl.paste(
@@ -29,7 +29,7 @@ def generate_image(*frame_pixels):
         frame = Image.new("RGB", (size, size))
         layer = Image.frombytes("RGB", (size, size), to_bytes(pixels))
         frame.paste(layer, (0, 0))
-        frame.paste(repl, (size - repl_size - repl_gutter * 2, 0), repl)
+        frame.paste(repl, (size - repl_size - repl_gutter - 80, 0), repl)
         frame = frame.crop((0, 0, 960, 540))
         frames.append(frame)
 
